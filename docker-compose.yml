@@ -8,8 +8,9 @@ services:
     volumes:
       - ssl_data:/etc/resty-auto-ssl
     environment:
-      ALLOWED_DOMAINS: "([a-z]+.)?nikpetrich.net"
-      SITES: "dice.nikpetrich.net=http://localhost:1111/; inventory.nikpetrich.net=http://localhost:1112/"
+      ALLOWED_DOMAINS: "*.nikpetrich.net"
+      SITES: "dice.nikpetrich.net=dice:1111/; inventory.nikpetrich.net=inventory:1112/"
+      FORCE_HTTPS: true
 
 volumes:
   ssl_data:
