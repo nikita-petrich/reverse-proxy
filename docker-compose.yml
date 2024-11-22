@@ -8,8 +8,8 @@ services:
     volumes:
       - ssl_data:/etc/resty-auto-ssl
     environment:
-      ALLOWED_DOMAINS: "*.nikpetrich.net"
-      SITES: "inventory.nikpetrich.net=https://www.youtube.com/"
+      ALLOWED_DOMAINS: "nikpetrich.net"
+      SITES: "nikpetrich.net=https://www.youtube.com/"
 
 volumes:
   ssl_data:
