@@ -7,18 +7,10 @@ services:
       - 443:443
     volumes:
       - ssl_data:/etc/resty-auto-ssl
+    network_mode: host
     environment:
-      ALLOWED_DOMAINS: "nikpetrich.net"
-      SITES: "nikpetrich.net=http://frontend:80"
-    networks:
-      - reverse-proxy_default
-      - erp_default
-
-networks:
-  reverse-proxy_default:
-    external: true
-  erp_default:
-    external: true
+      ALLOWED_DOMAINS: "*nikpetrich.net"
+      SITES: "inventory.nikpetrich.net=http://localhost:1112"
 
 volumes:
   ssl_data:
