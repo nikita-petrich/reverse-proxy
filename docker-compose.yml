@@ -9,7 +9,7 @@ services:
       - ssl_data:/etc/resty-auto-ssl
     environment:
       ALLOWED_DOMAINS: "nikpetrich.net"
-      SITES: "nikpetrich.net=https://www.youtube.com/"
+      SITES: "nikpetrich.net=localhost:1112"
 
 volumes:
   ssl_data:
