@@ -6,11 +6,11 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ssl_data:/etc/resty-auto-ssl
+      - ssl-data:/etc/resty-auto-ssl
     network_mode: host
     environment:
       ALLOWED_DOMAINS: "nikpetrich.net" # The domain of your server
       SITES: "dice.nikpetrich.net=http://localhost:1111;inventory.nikpetrich.net=http://localhost:1112;" # The subdomains and their corresponding ports
 
 volumes:
-  ssl_data:
+  ssl-data:
