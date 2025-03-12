@@ -9,8 +9,8 @@ services:
       - ssl-data:/etc/resty-auto-ssl
     network_mode: host
     environment:
-      ALLOWED_DOMAINS: "nikpetrich.net" # The domain of your server
-      SITES: "dice.nikpetrich.net=http://localhost:1111;inventory.nikpetrich.net=http://localhost:1112;" # The subdomains and their corresponding ports
+      ALLOWED_DOMAINS: "nikpetrich.com" # The domain of your server
+      SITES: "dice.nikpetrich.com=http://localhost:1111;inventory.nikpetrich.com=http://localhost:1112;" # The subdomains and their corresponding ports
 
 volumes:
   ssl-data:
