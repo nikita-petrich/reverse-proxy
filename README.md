@@ -1,12 +1,21 @@
-# reverse-proxy
+# Reverse Proxy
 
 ## Project Description
 
-This is a reverse proxy configuration of the `valian/docker-nginx-auto-ssl` image to forward client subdomain requests to multiple Docker containers running on the localhost.
+This project provides a reverse proxy configuration based on the `valian/docker-nginx-auto-ssl` Docker image.  
+It allows forwarding client subdomain requests to multiple Docker containers running either on the local host or within Docker networks.  
+
+**Features:**  
+- Automatic SSL certificate issuance and renewal.
+
+**Note:**  
+- The included `compose.yml` is designed for use within Docker networking. It expects that all Docker apps are running in the **same network** as the reverse proxy for proper request forwarding. 
+- The `compose-host.yml` is intended for **localhost forwarding** and does **not** require all apps to be in the same network.
 
 ## Usage
 
-- Check the the official documentation: https://hub.docker.com/r/valian/docker-nginx-auto-ssl
+For detailed information and configuration options, see the official documentation:  
+[https://hub.docker.com/r/valian/docker-nginx-auto-ssl](https://hub.docker.com/r/valian/docker-nginx-auto-ssl)
 
 ## License
 
