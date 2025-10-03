@@ -1,0 +1,21 @@
+services:
+  nginx:
+    image: valian/docker-nginx-auto-ssl
+    restart: on-failure
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ssl-data:/etc/resty-auto-ssl
+    environment:
+      ALLOWED_DOMAINS: "example.de" # The domain of your server
+      SITES: "example.de=example-web:3000" # The subdomains and their corresponding ports
+    networks:
+      - example-net
+
+volumes:
+  ssl-data:
+
+networks:
+  example-net:
+    name: example-net
